@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex101</title>
+    <style>
+    .main {
+        font-size: 36px;
+        font-weight: bold;
+        text-indent: 450px;
+        Text-align: justify;
+    }
+          
+    .gfg {
+        margin-left: 60px;
+        border: 50px solid #009900;
+        width: 900px;
+        height: 400px;
+        text-align: center;
+        padding: 20px;
+    }
+          
+    .gfg1 {
+        font-size: 20px;
+        font-weight: bold;
+        color: #009900;
+        margin-top: 30px;
+        background-color: #c5c5db;
+    }
+          
+    .gfg2 {
+        font-size: 18px;
+        font-weight: bold;
+        background-color: #c5c5db;
+    }
+    </style>
+</head>
+<body>
+    <div class="main">Regex101 Clone</div>
+    <div class="gfg">
+        <div class="gfg1">If you give me string and a regular expression,<br> I will return you the match of it along with it's positon<br>Try Me!</div>
+        <div class="gfg2">
+            <form action="" method="POST">
+                <label>Enter the String: </label>
+                <input type="text" name="string" value="{{string}}"><br>
+                <label>Enter the Regular Expression:</label>
+                <input type="text" name="regex" value="{{regex}}"><br>
+                <button type="submit">Submit</button>
+                
+                {% if count>0 %}
+                <p>Hey! <b>{{Print}}</b><br>Here are the Results:<br>
+                Total no. of Matches for given Regular Expression: <b>{{count-1}}</b>
+                <br>
+                {% for ele in eles %}
+                    <b>{{ele}}</b><br>
+                {% endfor %}
+                {% elif count==-1 %}
+                {% else %}
+                <p>Oops! <b>Match Not Found!</b> <br>
+                Total Matches: {{count}}<br>
+                Try giving me another Regular Expression.
+                {% endif %}
+                </p>
+            </form>
+        </div>
+    </div>
+    <!--<h1>Regex101 Clone</h1>
+    <p>If you give me string and a regular expression, I will return you the match of it along with it's positon</p>
+    <h3>Try Me</h3>
+    <hr>
+    <form action="" method="POST">
+        <label>Enter the String: </label>
+        <input type="text" name="string" value="{{string}}"><br>
+        <label>Enter the Regular Expression:</label>
+        <input type="text" name="regex" value="{{regex}}"><br>
+        <button type="submit">Submit</button>
+        <hr><hr>
+        {% if count>0 %}
+        <p>Hey! <b>{{Print}}</b><br>Here are the Results:<br>
+        Total no. of Matches for given Regular Expression: <b>{{count-1}}</b>
+        <br>
+        {% for ele in eles %}
+            <b>{{ele}}</b><br>
+        {% endfor %}
+        {% elif count==-1 %}
+        {% else %}
+        <p>Oops! <b>Match Not Found!</b> <br>
+        Total Matches: {{count}}<br>
+        Try giving me another Regular Expression.
+        {% endif %}
+        </p>
+    </form>-->
+    
+</body>
+</html>
